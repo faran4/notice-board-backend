@@ -10,10 +10,10 @@ const noticeRoutes = require("./routes/noticeRoutes");
 const app = express();
 
 app.use(cors()); 
-// app.use(cors({
-//     origin: 'http://localhost:5173', 
-//     credentials: true
-//   }));
+app.use(cors({
+  origin: ['http://localhost:5173', 'https://notice-board-frontend-two.vercel.app'],
+  credentials: true
+}));
 app.use(express.json());
 
 // Base route for Render testing
