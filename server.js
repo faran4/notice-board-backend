@@ -14,6 +14,11 @@ app.use(cors({
   }));
 app.use(express.json());
 
+// Base route for Render testing
+app.get('/', (req, res) => {
+  res.json({ message: 'Notice Board API is running' });
+});
+
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/notices", noticeRoutes);
